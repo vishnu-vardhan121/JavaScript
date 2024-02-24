@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(./src/bglgin.jpeg);
+        }
+        label{
+            position: relative;
+            left: 5px;
+        }
+        .pp{
+            margin: 100px auto; 
+            border: 2px solid  red;
+            border-radius: 2%;
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 30%;
+            filter: blur(px);
+            left: 30%;
+        }
+        input{
+            position: relative;
+            right: 0px;
+        }
+        .bt1{
+            background-color: rgb(214, 214, 244);
+            width: 98%;
+            height: 30px;
+            margin-top: 30px;
+            margin-left: 4px;
+        }
+        .bt2{
+            background-color: rgb(214, 214, 244);
+            width: 98%;
+            height: 30px;
+            margin-left: 4px;
+        }
+    </style>
+</head>
+<body>
+        <div class="pp" >
+            <center><h1 style="color: red;">welcome</h1></center>
+            <form action="">
+                <label for="">User Name :</label>
+                <input type="text"><br><br>
+                <label for="" >Password :</label>
+                <input type="text" maxlength="10">
+            </form>
+            <button class="bt1">LOG IN</button><br>
+            <p style="margin-bottom: 0px;margin-left: 3px;font-size: small; color: blue;">Create an account</p>
+            <button class="bt2">Register</button>
+        </div>
+    <script>
+        b=document.getElementsByTagName("button")
+        b[0].addEventListener("click", ()=>{
+            event.preventDefault()
+            arr=localStorage.getItem('array')
+            vv=JSON.parse(arr)
+            console.log(vv)
+            inp = document.getElementsByTagName("input")
+            uname=inp[0].value
+            pass = inp[1].value
+            cc=0
+            for(i=0;i<vv.length;i++){
+                
+                if(uname==vv[i]["user_name"]){
+                    cc++
+                    if(pass==vv[i]["password"]){
+                        localStorage.setItem("user",vv[i]["user_name"])
+                        window.open("./cardsJS.html","_self")
+                        break
+                    }else{
+                        alert("incorrect password")
+                        break;
+                    }
+                    
+                }
+            }
+            if(cc==0){
+                    alert("user name not found")
+            }
+
+            
+        })
+        b[1].addEventListener("click",reg)
+        
+        function reg(){
+            window.open("./rigister.html","_self")
+        }
+
+    </script>
+</body>
+</html>

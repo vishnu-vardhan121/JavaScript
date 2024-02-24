@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        .as{
+            text-align: center;
+        }
+        img{
+            width: 50px;
+        }
+        .sign{
+            position: absolute;
+            right: 10px;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        h=document.createElement("h1")
+        h.innerText="Vishnu Vardhan"
+        h.style.textAlign ='center'
+        h.style.Color="purple"
+        h.style.backgroundColor = "purple";
+        document.body.append(h)
+        hr=document.createElement('hr')
+        document.body.append(hr)
+        imgg=document.createElement("img");
+        imgg.style.float='left'
+        document.body.append(imgg)
+        var fieldset = document.createElement('fieldset');
+        fieldset.setAttribute('class', 'fld');
+        var legend = document.createElement('legend');
+        legend.setAttribute('class', 'lgnd');
+        legend.textContent = 'Career Objective';
+        fieldset.appendChild(legend);
+        document.body.appendChild(fieldset);
+        var p= document.createElement('p');
+        p.textContent="A resourceful individual with a proven track record in implementing successful marketing strategies, boosting organic traffic, and improving search rankings seeks a position of Marketing Associate at ABC company to maximize brand awareness and revenue through integrated marketing communications."
+        fieldset.appendChild(p);
+        s2=document.createElement('fieldset')
+        lg1=document.createElement('legend');
+        lg1.textContent="skilles"
+        ul=document.createElement('ul')
+        l1=document.createElement('li')
+        l1.textContent="Html"
+        ul.appendChild(l1)
+        l1=document.createElement('li')
+        l1.textContent="CSS"
+        ul.appendChild(l1)
+        l1=document.createElement('li')
+        l1.textContent="JavaScript"
+        ul.appendChild(l1)
+        l1=document.createElement('li')
+        l1.textContent="Python"
+        ul.appendChild(l1)
+        l1=document.createElement('li')
+        l1.textContent="SQL"
+        ul.appendChild(l1)
+        s2.appendChild(lg1)
+        s2.appendChild(ul)
+        document.body.appendChild(s2)
+        s2=document.createElement('fieldset')
+        lg1=document.createElement('legend');
+        lg1.textContent="Hobbies"
+        ul=document.createElement('ul')
+        l1=document.createElement('li')
+        l1.textContent="Drowing"
+        ul.appendChild(l1)
+        l1=document.createElement('li')
+        l1.textContent="Playing Violin"
+        ul.appendChild(l1)
+        l1=document.createElement('li')
+        l1.textContent="Photography"
+        ul.appendChild(l1)
+        l1=document.createElement('li')
+        l1.textContent="Reading"
+        ul.appendChild(l1)
+        s2.appendChild(lg1)
+        s2.appendChild(ul)
+        document.body.appendChild(s2)
+        var fieldset = document.createElement('fieldset');
+        legend.setAttribute('class', 'lgnd');
+        legend.textContent = 'Declaration';
+        fieldset.appendChild(legend);
+        document.body.appendChild(fieldset);
+        var p= document.createElement('p');
+        p.textContent="I hereby declare that I am a motivated and creative professional with expertise in [your field]. Dedicated to delivering high-quality work and contributing effectively to projects, I am committed to continuous learning."
+        fieldset.appendChild(p);
+
+    </script>
+
+    <div class="sign">
+        <b>Vishnu vardhan</b><br>
+        <img src="./src/anilsingn.jpg" alt="">
+    </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display:grid;
+            background-image: url(./src/bglgin.jpeg);
+        }
+        label{
+            position: relative;
+            left: 5px;
+        }
+        .pp{
+            border: 2px solid  red;
+            border-radius: 2%;
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 30%;
+            filter: blur(px);
+            left: 30%;
+        }
+        input{
+            position: relative;
+            right: 0px;
+        }
+        .bt1{
+            background-color: rgb(214, 214, 244);
+            width: 98%;
+            height: 30px;
+            margin-top: 30px;
+            margin-left: 4px;
+        }
+        .bt2{
+            background-color: rgb(214, 214, 244);
+            width: 98%;
+            height: 30px;
+            margin-left: 4px;
+        }
+    </style>
+</head>
+<body>
+        <div class="pp" >
+            <center><h1 style="color: red;">welcome</h1></center>
+            <form action="">
+                <label for="">User Name :</label>
+                <input type="text"><br><br>
+                <label for="" >Password :</label>
+                <input type="text" maxlength="10">
+            </form>
+            <button class="bt1">LOG IN</button><br>
+            <p style="margin-bottom: 0px;margin-left: 3px;font-size: small; color: blue;">Create an account</p>
+            <button class="bt2">Register</button>
+        </div>
+    <script>
+        b=document.getElementsByTagName("button")
+        b[0].addEventListener("click",login)
+        
+        function login(){
+            window.open("./cardsJS.html",self)
+        }
+        b[1].addEventListener("click",reg)
+        
+        function reg(){
+            window.open("./register.html",self)
+        }
+
+    </script>
+</body>
+</html>
